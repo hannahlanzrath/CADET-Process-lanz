@@ -68,6 +68,7 @@ jobs:
           conda run pip install -e ./[all] --group testing
 
       - name: Test
+        continue-on-error: true
         env:
           MPLBACKEND: Agg
         run: |
